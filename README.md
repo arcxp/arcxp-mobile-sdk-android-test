@@ -1,6 +1,6 @@
 verify access to sdk:
 
-open local.properties
+open local.properties after building locally in android studio
 add your github name and classic PAT (with read packages permission)
 
 GITHUB_USER=username
