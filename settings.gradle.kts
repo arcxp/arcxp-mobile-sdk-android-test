@@ -22,7 +22,6 @@ val localProperties = Properties().apply {
     }
 }
 
-val githubUserId: String? = localProperties.getProperty("GITHUB_USER_ID")
 val githubToken: String? = localProperties.getProperty("GITHUB_PERSONAL_ACCESS_TOKEN")
 
 dependencyResolutionManagement {
@@ -32,7 +31,14 @@ dependencyResolutionManagement {
         mavenCentral()
         maven {
             credentials {
-                username = githubUserId ?: ""
+                username = "github"
+                password = githubToken ?: ""
+            }
+            url = uri("https://maven.pkg.github.com/arcxp/arcxp-sdk-android-omid/")
+        }
+        maven {
+            credentials {
+                username = "github"
                 password = githubToken ?: ""
             }
             url = uri("https://maven.pkg.github.com/arcxp/arcxp-sdk-android")
