@@ -41,7 +41,7 @@ dependencyResolutionManagement {
                 username = "github"
                 password = githubToken ?: ""
             }
-            url = uri("https://maven.pkg.github.com/arcxp/arcxp-sdk-android")
+            url = uri("https://maven.pkg.github.com/arcxp-mobile/arcxp-mobile-sdk-android")
         }
     }
 }
